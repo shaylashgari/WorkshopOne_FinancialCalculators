@@ -3,7 +3,7 @@ package com.ps;
 import java.util.Scanner;
 
 
-}
+
 public class MortgageCalculator {
     public static void main(String[] args) {
         float principleAmount;
@@ -21,6 +21,10 @@ public class MortgageCalculator {
         float monthlyInterestRate= (interestRate/100 )/12;
         int loanLengthInMonths= loanLength * 12;
 
+        double monthlyPayment = (principleAmount * monthlyInterestRate * Math.pow(1+monthlyInterestRate, loanLengthInMonths))/
+                (Math.pow(1+monthlyInterestRate, loanLengthInMonths)-1);
+
+        System.out.println("The monthly payment is: "+ monthlyPayment);
 
     }
 
