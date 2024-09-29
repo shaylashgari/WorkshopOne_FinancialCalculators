@@ -12,6 +12,7 @@ public class MortgageCalculator {
 
         Scanner input= new Scanner(System.in);
         System.out.println(" Please enter the principle amount:");
+
         principleAmount= input.nextFloat();
         System.out.println("Please enter the interest rate: ");
         interestRate= input.nextFloat();
